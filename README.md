@@ -16,6 +16,7 @@ body {
     width: 100%;
 }
 ```
+
 ### 浏览器重置
 - 对常见默认有`margin`或`padding`的元素取消`margin`和`padding`
 - 对`tabel`取消相邻单元格之间的间隙
@@ -58,7 +59,7 @@ body {
 - 取消`textarea`默认可放缩属性，取消默认有下划线元素的下划线
 - 使`button`等元素，在鼠标经过为手型
 - 给表单元素的`placeholder`改变颜色
-- 给`template`设置默认影藏
+- 给`template`设置默认隐藏
 
 ### 常用简写CSS类名
 - **颜色定义** `fc`为*font-color*缩写，`bc`为*background-color*缩写
@@ -66,7 +67,17 @@ body {
 - 依次有padding，margin，对其，浮动，相邻行级元素垂直对齐，相对和绝对定位以及方向值，层叠顺序，宽高的基本定义，盒子模型
 
 ### 常用基本类名
-- `middle`类，利用绝对定位的拉升性，对已设置过宽高的元素，进行相对最近设置过定位信息元素的中心居中
+- `middle`类，利用绝对定位的拉升特性，对已设置过宽高的元素，进行相对最近设置过定位信息元素的中心居中
+```css
+.middle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+```
 - `bb`类，定义盒子模型宽高计算规则
 ```css
 .bb {
@@ -75,7 +86,7 @@ body {
     box-sizing: border-box;
 }
 ```
-- `top-middle`类，使元素向上移动半个自身的高度，*位置高度元素垂直居中用到*配合`top-50`类使用效果更佳
+- `top-middle`类，使元素向上移动半个自身的高度，*未知高度元素垂直居中用到*配合`top-50`类使用效果更佳
 ```css
 .top-middle {
     -webkit-transform: -webkit-translateY(-50%);
@@ -88,3 +99,11 @@ body {
     top: 50%;
 }
 ```
+
+---
+
+### Other
+
+- 下载Zip包或者`git clone https://github.com/hangyangws/baseCss.git`到本地，使用根目录下的`src/basse.css`
+    > 当然，如果你不稀饭base这个单词，你可以修改名字。
+- 使用前应该通看一遍base.css的内容，熟记每个类名的意义。
