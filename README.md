@@ -105,5 +105,5 @@ body {
 ### Other
 
 - 下载Zip包或者`git clone https://github.com/hangyangws/baseCss.git`到本地，使用根目录下的`src/basse.css`
-    > 当然，如果你不稀饭base这个单词，你可以修改名字。
+> 当然，如果你不稀饭base这个单词，你可以修改名字。
 - 使用前应该通看一遍base.css的内容，熟记每个类名的意义。
