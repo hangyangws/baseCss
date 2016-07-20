@@ -69,6 +69,11 @@ q::after {
     content: '';
 }
 
+
+/**
+ * 手动继承某些元素的某些属性
+ */
+
 a,
 h1,
 h2,
@@ -90,6 +95,11 @@ optgroup {
     color: inherit;
     outline: none;
 }
+
+
+/**
+ * body全局设置
+ */
 
 body {
     font: 14px 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
