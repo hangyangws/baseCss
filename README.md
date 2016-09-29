@@ -102,6 +102,15 @@ body {
 
 ---
 
+
+### 移动端
+
+- Zepto文件
+
+> Zepto默认不支持`tap`事件，所以`./src/zepto.js`结合了 `event.min.js` 和 `touch.min.js`，直接使用。
+
+---
+
 ### Other
 
 - 下载Zip包或者`git clone https://github.com/hangyangws/baseCss.git`到本地，使用根目录下的`src/basse.css`
