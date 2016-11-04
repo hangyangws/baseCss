@@ -4,6 +4,9 @@
  * Created by hangyangws(hangyangws@foxmail.com) in 2014-09-01.
  * [reset.css & base.css]
  */
+html {
+    font-size: 14px;
+}
 
 html,
 body {
@@ -130,6 +133,16 @@ input[type='button'] {
 input::-moz-focus-inner {
     padding: 0;
     border: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
