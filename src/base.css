@@ -16,11 +16,11 @@ html {
 
 html,
 body {
+    position: relative;
+    width: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-    position: relative;
-    width: 100%;
 }
 
 p,
