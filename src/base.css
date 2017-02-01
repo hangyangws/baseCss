@@ -5,11 +5,7 @@
  * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
  */
 
-
-/**
- * reset style
- */
-
+/*标准字体大小（rem参照对象）设置为14像素*/
 html {
     font-size: 14px;
 }
