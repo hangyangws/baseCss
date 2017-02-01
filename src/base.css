@@ -145,26 +145,33 @@ optgroup {
 
 body {
     font: 14px 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
+    position: relative;
     color: #666;
     background: #fff;
-    position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
 
+
 /*取消下面元素的默认文字装饰（下划线、中划线）*/
+
 a,
 del,
 ins {
     text-decoration: none;
 }
 
+
 /*取消ol，ul默认列表样式*/
+
 ol,
 ul {
     list-style: none;
 }
+
+
+/*使如下元素默认鼠标经过是`小手`的形状（一般表示可以点击）*/
 
 button,
 input[type='submit'],
@@ -172,10 +179,16 @@ input[type='button'] {
     cursor: pointer;
 }
 
+
+/*取消火狐浏览器部分版本`input`聚焦的时候默认的`padding、border`*/
+
 input::-moz-focus-inner {
     padding: 0;
     border: 0;
 }
+
+
+/*取消部分浏览器`input[type='number']`的默认样式*/
 
 input[type='number'] {
     -moz-appearance: textfield;
@@ -188,7 +201,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/*placeholder*/
+/*输入控件的`placeholder`颜色设置为`#999`（浅灰色）*/
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -211,8 +224,15 @@ textarea:-ms-input-placeholder {
 }
 
 
+/*由于部分浏览器`template`直接显示出来，所以要隐藏`template`元素*/
+
+template {
+    display: none;
+}
+
+
 /**
- * common style
+ * 清楚浮动`c ==> clear`,原子类
  */
 
 .c {
@@ -227,13 +247,8 @@ textarea:-ms-input-placeholder {
     content: '.';
 }
 
-.pr {
-    position: relative;
-}
 
-.pa {
-    position: absolute;
-}
+/*`position: fixed`的缩写，原子类*/
 
 .pf {
     position: fixed;
@@ -241,33 +256,8 @@ textarea:-ms-input-placeholder {
     -webkit-transform: translateZ(0);
 }
 
-.t0 {
-    top: 0;
-}
 
-.l0 {
-    left: 0;
-}
-
-.b0 {
-    bottom: 0;
-}
-
-.r0 {
-    right: 0;
-}
-
-.z1 {
-    z-index: 1;
-}
-
-.z2 {
-    z-index: 2;
-}
-
-.z3 {
-    z-index: 3;
-}
+/*利用绝对定位宽高拉升原理，中心居中元素，原子类*/
 
 .middle {
     position: absolute;
@@ -277,6 +267,9 @@ textarea:-ms-input-placeholder {
     left: 0;
     margin: auto;
 }
+
+
+/*利用相对定位于`CSS3`使元素垂直居中，原子类*/
 
 .middle-v {
     position: relative;
@@ -288,29 +281,16 @@ textarea:-ms-input-placeholder {
 }
 
 
-/*width height*/
-
-.w1 {
-    width: 100%;
-}
-
-.h1 {
-    height: 100%;
-}
-
-
-/*display*/
-
-.none,
-template {
-    display: none;
-}
+/*元素计算宽高德盒子模型以`border`为外界限，原子类*/
 
 .bb {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+
+/*文本溢出显示省略号`to==>text-overflow`，原子类*/
 
 .to {
     overflow: hidden;
