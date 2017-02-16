@@ -41,35 +41,30 @@
     }
 
 
-    /*移除浏览器默认的`margin、padding`*/
+    /**
+     * 移除常用标签的浏览器默认的`margin、padding`
+     * pre、code、legend、fieldset、blockquote……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
+     */
 
+    body,
     p,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
     h1,
     h2,
     h3,
     h4,
     h5,
     h6,
+    dl,
+    dd,
+    ul,
+    ol,
     th,
     td,
-    div,
-    pre,
-    body,
-    code,
-    form,
-    input,
-    legend,
     button,
     figure,
-    fieldset,
+    input,
     textarea,
-    blockquote {
+    form {
         margin: 0;
         padding: 0;
     }
@@ -97,14 +92,14 @@
     }
 
 
-    /*移除浏览器部分元素的默认边框*/
+    /**
+     * 移除浏览器部分元素的默认边框。
+     * acronym、fieldset……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
+     */
 
     img,
-    abbr,
     input,
     button,
-    acronym,
-    fieldset,
     textarea {
         border: none;
     }
@@ -124,12 +119,15 @@
     }
 
 
-    /*因为部分浏览器默认的`q`标签的前后伪元素有多余样式，所以置空`q`标签前后伪元素*/
-
+    /**
+     * 因为部分浏览器默认的`q`标签的前后伪元素有多余样式，所以置空`q`标签前后伪元素。
+     * q标签不是很常见，如果开发者需要可以使用。
+    /*
     q::before,
     q::after {
         content: '';
     }
+    */
 
 
     /**
@@ -161,7 +159,7 @@
 
 
     /**
-     * 如果绝对定位元素，找不到被设置过定位信息的上级元素，那么这个元素就基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位。
+     * 如果绝对定位元素找不到被设置过定位信息的上级元素，那么此元素基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位。
      * 设置网页基本字体颜色为`#666`(深灰色)。
      * 设置网页背景颜色颜色为`#fff`（纯白色）。
      * 使字体渲染更顺滑。
@@ -178,16 +176,19 @@
     }
 
 
-    /*取消下面元素的默认文字装饰（下划线、中划线）*/
+    /**
+     * 取消超链接元素的默认文字装饰（下划线）。
+     * 灵位del、ins标签的中划线、下划线还是挺好的，就不去掉。
+     */
 
-    a,
-    del,
-    ins {
+    a {
         text-decoration: none;
     }
 
 
-    /*取消ol，ul默认列表样式*/
+    /**
+     * 开发中UI设计的列表都是和原生的样式差太多，所以直接给取消ol，ul默认列表样式。
+     */
 
     ol,
     ul {
@@ -195,7 +196,7 @@
     }
 
 
-    /*使如下元素默认鼠标经过是`小手`的形状（一般表示可以点击）*/
+    /*使如下元素默认鼠标经过是`小手`的形状（一般表示可以点击，在PC端挺好）*/
 
     button,
     input[type='submit'],
@@ -272,7 +273,7 @@
     }
 
 
-    /*`position: fixed`的缩写，原子类*/
+    /*position: fixed的缩写，原子类*/
 
     .pf {
         position: fixed;
@@ -314,14 +315,13 @@
     }
 
 
-    /*文本溢出显示省略号`to==>text-overflow`，原子类*/
+    /*单行文本溢出显示省略号`to==>text-overflow`，原子类*/
 
     .to {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-
     ```
 
 - ### 其它
