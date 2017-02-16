@@ -62,6 +62,17 @@ blockquote {
 }
 
 
+/*不同浏览器的input、select、textarea的盒子模型宽度计算方式不通，统一为最常见的content-box*/
+
+input,
+select,
+textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
 /**
  * `table`相邻单元格的边框间的距离设置为0。
  * 设置`table`的边框为合并模式。
@@ -232,7 +243,7 @@ template {
 
 
 /**
- * 清楚浮动`c ==> clear`,原子类
+ * 清楚浮动`c ==> clear`，原子类
  */
 
 .c {

@@ -11,6 +11,14 @@
 - ### 代码解释
 
     ```css
+    @charset 'utf-8';
+
+    /**
+     * base.css
+     * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
+     */
+
+
     /*标准字体大小（rem参照对象）设置为14像素*/
 
     html {
@@ -64,6 +72,17 @@
     blockquote {
         margin: 0;
         padding: 0;
+    }
+
+
+    /*不同浏览器的input、select、textarea的盒子模型宽度计算方式不通，统一为最常见的content-box*/
+
+    input,
+    select,
+    textarea {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
     }
 
 
@@ -237,7 +256,7 @@
 
 
     /**
-     * 清楚浮动`c ==> clear`,原子类
+     * 清楚浮动`c ==> clear`，原子类
      */
 
     .c {
