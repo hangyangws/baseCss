@@ -6,10 +6,16 @@
  */
 
 
-/*标准字体大小（rem参照对象）设置为14像素*/
+/**
+ * 标准字体大小（rem参照对象）
+ * 为了方便计算，设置根节点为62.5%
+ * 因为浏览器的默认像素的16px
+ * 所以16px*62.5=10px
+ * 那么在某个元素上，我们要设置14px，直接写1.4rem，即：10px*1.4=14px
+ */
 
 html {
-    font-size: 14px;
+    font-size: 62.5%;
 }
 
 
@@ -153,7 +159,7 @@ optgroup {
  */
 
 body {
-    font: 14px 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
+    font: 1.4rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
     position: relative;
     color: #666;
     background: #fff;
