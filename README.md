@@ -1,333 +1,336 @@
 # baseCss
 
-- ### 意义
-    统一各个浏览器差异、统一团队开发起始标准、弥补浏览器的“缺点”、提供频繁使用的原子类名。
-
-- ### 友情提示
-    - 前端开发中如果不是UI特别要求，颜色值采用web安全色最佳，像素以偶数最佳。
-    - 移动端开发，量度可以尝试rem为单位（什么是rem，请自行Google）。
-    - 使用rem为量度单位时，浏览器会是基于html节点而不是body节点计算大小。
-
-- ### 代码解释
-
-    ```css
-    @charset 'utf-8';
-
-    /**
-     * base.css
-     * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
-     */
-
-
-    /*标准字体大小（rem参照对象）设置为14像素*/
+### 意义
+统一各个浏览器差异、统一团队开发起始标准、弥补浏览器的“缺点”、提供频繁使用的原子类名
+
+### 友情提示
+- 前端开发中如果不是UI特别要求，颜色值采用web安全色最佳，像素以偶数最佳
+- 移动端开发，量度可以尝试rem为单位（什么是rem，请自行Google）
+- 使用rem为量度单位时，浏览器会是基于html节点而不是body节点计算大小
+
+### 代码解释
+```css
+/**
+ * base.css
+ * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
+ */
+
+
+/*标准字体大小（rem参照对象）*/
+
+html {
+    font-size: 14px;
+}
+
+
+/**
+ * 当`body`宽度大于`html`宽度时，某些浏览器会出现内部滚动条，所以给`html、body`设置宽度100%。
+ * 取消部分浏览器点击有阴影。
+ * 优化移动端滚动事件。
+ */
+
+html,
+body {
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+
+/**
+ * 移除常用标签的浏览器默认的`margin、padding`
+ * pre、code、legend、fieldset、blockquote……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
+ */
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+ul,
+ol,
+th,
+td,
+button,
+figure,
+input,
+textarea,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*不同浏览器的input、select、textarea的盒子模型宽度计算方式不通，统一为最常见的content-box*/
+
+input,
+select,
+textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+/**
+ * `table`相邻单元格的边框间的距离设置为0。
+ * 设置`table`的边框为合并模式。
+ */
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+/**
+ * 移除浏览器部分元素的默认边框。
+ * acronym、fieldset……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
+ */
+
+img,
+input,
+button,
+textarea {
+    border: none;
+}
+
 
-    html {
-        font-size: 14px;
-    }
-
-
-    /**
-     * 当`body`宽度大于`html`宽度时，某些浏览器会出现内部滚动条，所以给`html、body`设置宽度100%。
-     * 取消部分浏览器点击有阴影。
-     * 优化移动端滚动事件。
-     */
-
-    html,
-    body {
-        width: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-overflow-scrolling: touch;
-        overflow-scrolling: touch;
-    }
-
-
-    /**
-     * 移除常用标签的浏览器默认的`margin、padding`
-     * pre、code、legend、fieldset、blockquote……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
-     */
-
-    body,
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dl,
-    dd,
-    ul,
-    ol,
-    th,
-    td,
-    button,
-    figure,
-    input,
-    textarea,
-    form {
-        margin: 0;
-        padding: 0;
-    }
-
-
-    /*不同浏览器的input、select、textarea的盒子模型宽度计算方式不通，统一为最常见的content-box*/
-
-    input,
-    select,
-    textarea {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-    }
-
-
-    /**
-     * `table`相邻单元格的边框间的距离设置为0。
-     * 设置`table`的边框为合并模式。
-     */
-
-    table {
-        border-spacing: 0;
-        border-collapse: collapse;
-    }
-
-
-    /**
-     * 移除浏览器部分元素的默认边框。
-     * acronym、fieldset……等其他标签不是很常用，所以本css都不会一一列举出来，为了简化。如果项目中用到，可以自己单独写。
-     */
-
-    img,
-    input,
-    button,
-    textarea {
-        border: none;
-    }
-
-
-    /*因为`input`默认不继承父元素的居中样式，所以让`input`元素继承父元素的文本居中方式*/
-
-    input {
-        text-align: inherit;
-    }
-
-
-    /*让`textarea`默认不可以放缩*/
-
-    textarea {
-        resize: none;
-    }
-
-
-    /**
-     * 因为部分浏览器默认的`q`标签的前后伪元素有多余样式，所以置空`q`标签前后伪元素。
-     * q标签不是很常见，如果开发者需要可以使用。
-    /*
-    q::before,
-    q::after {
-        content: '';
-    }
-    */
+/*因为`input`默认不继承父元素的居中样式，所以让`input`元素继承父元素的文本居中方式*/
+
+input {
+    text-align: inherit;
+}
+
+
+/*让`textarea`默认不可以放缩*/
 
+textarea {
+    resize: none;
+}
 
-    /**
-     * 由于以下元素的部分属性没有继承父节点样式，所以声明这些元素的这些属性为父元素的属性。
-     * 取消这些元素的`outline`样式。
-     */
 
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    input,
-    select,
-    button,
-    option,
-    textarea,
-    optgroup {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        font-style: inherit;
-        line-height: inherit;
-        color: inherit;
-        outline: none;
-    }
+/**
+ * 因为部分浏览器默认的`q`标签的前后伪元素有多余样式，所以置空`q`标签前后伪元素。
+ * q标签不是很常见，如果开发者需要可以使用。
+/*
+q::before,
+q::after {
+    content: '';
+}
+*/
 
 
-    /**
-     * 如果绝对定位元素找不到被设置过定位信息的上级元素，那么此元素基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位。
-     * 设置网页基本字体颜色为`#666`(深灰色)。
-     * 设置网页背景颜色颜色为`#fff`（纯白色）。
-     * 使字体渲染更顺滑。
-     */
+/**
+ * 由于以下元素的部分属性没有继承父节点样式，所以声明这些元素的这些属性为父元素的属性。
+ * 取消这些元素的`outline`样式。
+ */
 
-    body {
-        font: 14px 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
-        position: relative;
-        color: #666;
-        background: #fff;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-    }
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+button,
+option,
+textarea,
+optgroup {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    color: inherit;
+    outline: none;
+}
 
 
-    /**
-     * 取消超链接元素的默认文字装饰（下划线）。
-     * 灵位del、ins标签的中划线、下划线还是挺好的，就不去掉。
-     */
+/**
+ * 如果绝对定位元素找不到被设置过定位信息的上级元素，那么此元素基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位。
+ * 设置网页基本字体颜色为`#666`(深灰色)。
+ * 设置网页背景颜色颜色为`#fff`（纯白色）。
+ * 使字体渲染更顺滑。
+ */
 
-    a {
-        text-decoration: none;
-    }
+body {
+    font: 1rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
+    position: relative;
+    color: #666;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
 
 
-    /**
-     * 开发中UI设计的列表都是和原生的样式差太多，所以直接给取消ol，ul默认列表样式。
-     */
+/**
+ * 取消超链接元素的默认文字装饰（下划线）。
+ * 另外del、ins标签的中划线、下划线还是挺好的，就不去掉。
+ */
 
-    ol,
-    ul {
-        list-style: none;
-    }
+a {
+    text-decoration: none;
+}
 
 
-    /*使如下元素默认鼠标经过是`小手`的形状（一般表示可以点击，在PC端挺好）*/
+/**
+ * 开发中UI设计的列表都是和原生的样式差太多，所以直接给取消ol，ul默认列表样式。
+ */
 
-    button,
-    input[type='submit'],
-    input[type='button'] {
-        cursor: pointer;
-    }
+ol,
+ul {
+    list-style: none;
+}
 
 
-    /*取消火狐浏览器部分版本`input`聚焦的时候默认的`padding、border`*/
+/*使如下元素默认鼠标经过是`小手`的形状（一般表示可以点击，在PC端挺好）*/
 
-    input::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
+button,
+input[type='submit'],
+input[type='button'] {
+    cursor: pointer;
+}
 
 
-    /*取消部分浏览器`input[type='number']`的默认样式*/
+/*取消火狐浏览器部分版本`input`聚焦的时候默认的`padding、border`*/
 
-    input[type='number'] {
-        -moz-appearance: textfield;
-    }
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
 
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        margin: 0;
-        -webkit-appearance: none;
-    }
 
+/*取消部分浏览器`input[type='number']`的默认样式*/
 
-    /*输入控件的`placeholder`颜色设置为`#999`（浅灰色）*/
+input[type='number'] {
+    -moz-appearance: textfield;
+}
 
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder {
-        color: #999;
-    }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
 
-    input:-moz-placeholder,
-    textarea:-moz-placeholder {
-        color: #999;
-    }
 
-    input::-moz-placeholder,
-    textarea::-moz-placeholder {
-        color: #999;
-    }
+/*输入控件的`placeholder`颜色设置为`#999`（浅灰色）*/
 
-    input:-ms-input-placeholder,
-    textarea:-ms-input-placeholder {
-        color: #999;
-    }
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
 
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #999;
+}
 
-    /*由于部分浏览器`template`直接显示出来，所以要隐藏`template`元素*/
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #999;
+}
 
-    template {
-        display: none;
-    }
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #999;
+}
 
 
-    /**
-     * 清楚浮动`c ==> clear`，原子类
-     */
+/*由于部分浏览器`template`直接显示出来，所以要隐藏`template`元素*/
 
-    .c {
-        zoom: 1;
-    }
+template {
+    display: none;
+}
 
-    .c::after {
-        display: block;
-        visibility: hidden;
-        clear: both;
-        height: 0;
-        content: '.';
-    }
 
+/**
+ * 清楚浮动`c ==> clear`，原子类
+ */
 
-    /*position: fixed的缩写，原子类*/
+.c {
+    zoom: 1;
+}
 
-    .pf {
-        position: fixed;
-        /*chrome 内核 浏览器 position: fixed 防止抖动*/
-        -webkit-transform: translateZ(0);
-    }
+.c::after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.';
+}
 
 
-    /*利用绝对定位宽高拉升原理，中心居中元素，原子类*/
+/*position: fixed的缩写，原子类*/
 
-    .middle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
+.pf {
+    position: fixed;
+    /*chrome 内核 浏览器 position: fixed 防止抖动*/
+    -webkit-transform: translateZ(0);
+}
 
 
-    /*利用相对定位于`CSS3`使元素垂直居中，原子类*/
+/*利用绝对定位宽高拉升原理，中心居中元素，原子类*/
 
-    .middle-v {
-        position: relative;
-        top: 50%;
-        -webkit-transform: -webkit-translateY(-50%);
-        -moz-transform: -moz-translateY(-50%);
-        -o-transform: -o-translateY(-50%);
-        transform: translateY(-50%);
-    }
+.middle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
 
 
-    /*元素计算宽高德盒子模型以`border`为外界限，原子类*/
+/*利用相对定位于`CSS3`使元素垂直居中，原子类*/
 
-    .bb {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+.middle-v {
+    position: relative;
+    top: 50%;
+    -webkit-transform: -webkit-translateY(-50%);
+    -moz-transform: -moz-translateY(-50%);
+    -o-transform: -o-translateY(-50%);
+    transform: translateY(-50%);
+}
 
 
-    /*单行文本溢出显示省略号`to==>text-overflow`，原子类*/
+/*元素计算宽高德盒子模型以`border`为外界限，原子类*/
 
-    .to {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    ```
+.bb {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-- ### 其它
-    - 原子类的优缺点
-        1. 维护、维护困难（缺）
-        1. 阅读困难（缺）
-        1. 便于抽出复用代码，提高代码复用程度（优）
-    - 本`base.css`涉及的原子类解释
-        才接触开发的时候，我也特别喜欢使用原子类，比如：`m10 w10 p10 …`。后来我发现其中的很多弊端，比如难以维护、修改样式还要去修改HTML文件等等。所以本`base.css`包含的`c middle middle-v bb to`原子类都是我自己平时开发中用的最多不易变动的原子类。
+
+/*单行文本溢出显示省略号`to==>text-overflow`，原子类*/
+
+.to {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+```
+
+### 其它
+- 原子类的优缺点
+    1. 维护、维护困难（缺）
+    1. 阅读困难（缺）
+    1. 便于抽出复用代码，提高代码复用程度（优）
+- 本`base.css`涉及的原子类解释
+    才接触开发的时候，我也特别喜欢使用原子类，比如：`m10 w10 p10 …`。  
+    后来我发现其中的很多弊端：难以维护、修改样式还要去修改HTML文件…  
+    所以本`base.css`包含的几个原子类：`c、middle、middle-v、bb、to`都是我自己平时开发中最频繁使用且最不易变动的原子类。
+
+**感谢阅读**
+
+
