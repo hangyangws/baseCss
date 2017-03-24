@@ -283,7 +283,7 @@ template {
 
 /*利用相对定位于`CSS3`使元素垂直居中，原子类*/
 
-.middle-v {
+.v-middle {
     position: relative;
     top: 50%;
     -webkit-transform: -webkit-translateY(-50%);

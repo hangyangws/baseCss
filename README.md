@@ -293,7 +293,7 @@ template {
 
 /*利用相对定位于`CSS3`使元素垂直居中，原子类*/
 
-.middle-v {
+.v-middle {
     position: relative;
     top: 50%;
     -webkit-transform: -webkit-translateY(-50%);
@@ -332,8 +332,6 @@ template {
 
 才接触开发的时候，我也特别喜欢使用原子类，比如：`m10 w10 p10 …`。  
 后来我发现其中的很多弊端：难以维护、修改样式还要去修改HTML文件…  
-所以本`base.css`包含的几个原子类：`c、middle、middle-v、bb、to`都是我自己平时开发中最频繁使用且最不易变动的原子类。
+所以本`base.css`包含的几个原子类：`c、middle、v-middle、bb、to`都是我自己平时开发中最频繁使用且最不易变动的原子类。
 
 **感谢阅读**
-
-
