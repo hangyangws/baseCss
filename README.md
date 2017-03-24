@@ -13,6 +13,8 @@
 ### 代码解释
 
 ```css
+@charset 'utf-8';
+
 /**
  * base.css
  * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
