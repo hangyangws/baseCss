@@ -13,8 +13,6 @@
 ### 代码解释
 
 ```css
-@charset 'utf-8';
-
 /**
  * base.css
  * 航洋无声(hangyangws@foxmail.com、hangyangws.win、github.com/hangyangws、weibo.com/hangyangws)
@@ -258,7 +256,9 @@ template {
 }
 ```
 
-# public.css
+### public.css
+
+项目中的公共样式
 
 ```css
 /**
