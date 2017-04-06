@@ -71,7 +71,7 @@ form {
 }
 
 
-/*不同浏览器的input、select、textarea的盒子模型宽度计算方式不通，统一为最常见的content-box*/
+/*不同浏览器的input、select、textarea的盒子模型宽度计算方式不同，统一为最常见的content-box*/
 
 input,
 select,
