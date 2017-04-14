@@ -23,6 +23,7 @@
 
 html {
     font-size: 14px;
+    height: 100%;
 }
 
 
