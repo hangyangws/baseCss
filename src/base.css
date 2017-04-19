@@ -4,10 +4,18 @@
  */
 
 
-/*标准字体大小（rem参照对象）*/
+/**
+ * 标准字体大小设置14像素（rem参照对象）
+ * html根节点设置和浏览器一样高
+ * 如果内容操作，滚动事件发生在html元素上
+ * 背景颜色为白色
+ */
 
 html {
     font-size: 14px;
+    overflow-y: auto;
+    height: 100%;
+    background-color: #fff;
 }
 
 
@@ -20,11 +28,29 @@ html {
 
 html,
 body {
+    overflow-x: hidden;
     width: 100%;
-    height: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
+}
+
+
+/**
+ * 设置基本字体配置
+ * 如果绝对定位元素找不到被设置过定位信息的上级元素，那么此元素基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位
+ * 默认body为Y轴自动滚动
+ * 设置网页基本字体颜色为`#666`(深灰色)
+ * 使字体渲染更顺滑
+ */
+
+body {
+    font: 1rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
+    position: relative;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 
@@ -131,26 +157,6 @@ optgroup {
     line-height: inherit;
     color: inherit;
     outline: none;
-}
-
-
-/**
- * 如果绝对定位元素找不到被设置过定位信息的上级元素，那么此元素基于根节点定位，所以给`body`设置相对定位，让这些元素基于`body`定位
- * 默认body为Y轴自动滚动
- * 设置网页基本字体颜色为`#666`(深灰色)
- * 设置网页背景颜色颜色为`#fff`（纯白色）
- * 使字体渲染更顺滑
- */
-
-body {
-    font: 1rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
-    position: relative;
-    overflow-y: auto;
-    color: #666;
-    background: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
 }
 
 
