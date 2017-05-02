@@ -4,6 +4,10 @@
 
 统一各个浏览器差异、统一团队开发起始标准、弥补浏览器的“缺点”、提供频繁使用的原子类名
 
+### cdn链接
+
+[https://cdn.rawgit.com/hangyangws/baseCss/master/src/base.css](https://cdn.rawgit.com/hangyangws/baseCss/master/src/base.css)
+
 ### 友情提示
 
 前端开发中如果不是UI特别要求，颜色值采用web安全色最佳，像素以偶数最佳  
