@@ -3,64 +3,64 @@
  */
 
 .c {
-    zoom: 1;
+  zoom: 1;
 }
 
 .c::after {
-    display: block;
-    visibility: hidden;
-    clear: both;
-    height: 0;
-    content: '.';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: '.';
 }
 
 
 /*position: fixed的缩写，原子类*/
 
 .pf {
-    position: fixed;
-    /*chrome 内核 浏览器 position: fixed 防止抖动*/
-    -webkit-transform: translateZ(0);
+  position: fixed;
+  /*chrome 内核 浏览器 position: fixed 防止抖动*/
+  -webkit-transform: translateZ(0);
 }
 
 
 /*利用绝对定位宽高拉升原理，中心居中元素，原子类*/
 
 .middle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 
 /*利用相对定位于`CSS3`使元素垂直居中，原子类*/
 
 .v-middle {
-    position: relative;
-    top: 50%;
-    -webkit-transform: -webkit-translateY(-50%);
-    -moz-transform: -moz-translateY(-50%);
-    -o-transform: -o-translateY(-50%);
-    transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  -webkit-transform: -webkit-translateY(-50%);
+  -moz-transform: -moz-translateY(-50%);
+  -o-transform: -o-translateY(-50%);
+  transform: translateY(-50%);
 }
 
 
 /*元素计算宽高德盒子模型以`border`为外界限，原子类*/
 
 .bb {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 /*单行文本溢出显示省略号`to==>text-overflow`，原子类*/
 
 .to {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
