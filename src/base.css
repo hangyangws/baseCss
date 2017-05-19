@@ -115,6 +115,7 @@ input,
 button,
 textarea {
   border: none;
+  -webkit-appearance: none;
 }
 
 

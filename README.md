@@ -31,10 +31,10 @@
  */
 
 html {
-    font-size: 14px;
-    overflow-y: auto;
-    height: 100%;
-    background-color: #fff;
+  font-size: 14px;
+  overflow-y: auto;
+  height: 100%;
+  background-color: #fff;
 }
 
 
@@ -47,11 +47,11 @@ html {
 
 html,
 body {
-    overflow-x: hidden;
-    width: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 
@@ -64,12 +64,12 @@ body {
  */
 
 body {
-    font: 1rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
-    position: relative;
-    color: #666;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+  font: 1rem 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
+  position: relative;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 
@@ -97,8 +97,8 @@ figure,
 input,
 textarea,
 form {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -107,9 +107,9 @@ form {
 input,
 select,
 textarea {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 
@@ -119,8 +119,8 @@ textarea {
  */
 
 table {
-    border-spacing: 0;
-    border-collapse: collapse;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 
@@ -133,21 +133,22 @@ img,
 input,
 button,
 textarea {
-    border: none;
+  border: none;
+  -webkit-appearance: none;
 }
 
 
 /*因为`input`默认不继承父元素的居中样式，所以让`input`元素继承父元素的文本居中方式*/
 
 input {
-    text-align: inherit;
+  text-align: inherit;
 }
 
 
 /*让`textarea`默认不可以放缩*/
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 
@@ -169,13 +170,13 @@ button,
 option,
 textarea,
 optgroup {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    line-height: inherit;
-    color: inherit;
-    outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: none;
 }
 
 
@@ -185,7 +186,7 @@ optgroup {
  */
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -195,7 +196,7 @@ a {
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 
@@ -204,28 +205,28 @@ ul {
 button,
 input[type='submit'],
 input[type='button'] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
 /*取消火狐浏览器部分版本`input`聚焦的时候默认的`padding、border`*/
 
 input::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 
 
 /*取消部分浏览器`input[type='number']`的默认样式*/
 
 input[type='number'] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-    margin: 0;
-    -webkit-appearance: none;
+  margin: 0;
+  -webkit-appearance: none;
 }
 
 
@@ -233,29 +234,29 @@ input[type=number]::-webkit-outer-spin-button {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #999;
+  color: #999;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-    color: #999;
+  color: #999;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-    color: #999;
+  color: #999;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #999;
+  color: #999;
 }
 
 
 /*由于部分浏览器`template`直接显示出来，所以要隐藏`template`元素*/
 
 template {
-    display: none;
+  display: none;
 }
 ```
 
