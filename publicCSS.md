@@ -1,5 +1,18 @@
+# publicCSS
+
+### 意义
+
+项目中的公共样式，仅供参考；提供常用类名，不用在不同页面重复造轮子
+
+### 友情提示
+
+一般只是把最常用，且团队公认的样式抽离为公共原子类
+
+### 代码解释
+
+```css
 /**
- * 清楚浮动 「c ==> clear」，原子类
+ * 清楚浮动「c ==> clear」
  */
 
 .c {
@@ -15,7 +28,7 @@
 }
 
 
-/*position: fixed 的缩写，原子类*/
+/*position: fixed 的缩写*/
 
 .pf {
   position: fixed;
@@ -24,7 +37,7 @@
 }
 
 
-/*利用绝对定位宽高拉升原理，中心居中元素，原子类*/
+/*利用绝对定位宽高拉升原理，中心居中元素*/
 
 .middle {
   position: absolute;
@@ -36,7 +49,7 @@
 }
 
 
-/*利用相对定位于 CSS3 使元素垂直居中，原子类*/
+/*利用相对定位于 CSS3 使元素垂直居中*/
 
 .v-middle {
   position: relative;
@@ -48,7 +61,7 @@
 }
 
 
-/*元素计算宽高德盒子模型以 border 为外界限，原子类*/
+/*元素计算宽高德盒子模型以 border 为外界限「bb ==> border-box」*/
 
 .bb {
   -webkit-box-sizing: border-box;
@@ -57,10 +70,13 @@
 }
 
 
-/*单行文本溢出显示省略号 to==>text-overflow，原子类*/
+/*单行文本溢出显示省略号「to ==> text-overflow」*/
 
 .to {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+```
+
+**感谢阅读**
